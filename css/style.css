@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap');
+
+:root {
+    --fundo-principal: #ffffff; /* */
+    --cinza-fundo: #f5f5f5;
+    --vermelho-titulo: #960303;
+    --cinza-texto: #8c8888;
+    --cinza-rodape: #c4c4c4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    max-height: 71px;
+    display: flex;
+    justify-content: space-between;
+}
+.container.navbar {
+    display: flex;
+    justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    padding: 10px 20px; /* Espaçamento dentro do container (opcional) */
+  }
+.navbar{
+    display: flex;
+    text-align: right;
+}
+.navbar a{
+    text-decoration: none;
+    margin-left: 30px;
+    color: var(--cinza-texto);
+    font-family: roboto;
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: #000;
+}
+
+/* Section 01 = img_fundo */ 
+#img_fundo {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 250px 0;
+}
+#img_fundo h1 {
+    font-family: pacifico;
+    font-size: 81px; 
+    color: var(--fundo-principal);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+/* Section 02 = Sinopse*/
+#Sinopse {
+    background-color: var(--fundo-principal);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#Sinopse h2 {
+    font-size: 30px;
+    color: #960303;
+    margin-bottom: 30px;
+    font-family: pacifico;
+    font-size: 51px;
+}
+#Sinopse h3 {
+    font-size: 28px;
+    color: var(--cinza-texto);
+    margin-bottom: 30px;
+    font-family: roboto;
+    font-weight: bold;
+}
+
+/* Section 3 - grid_receitas */
+#grid_receitas {
+    background-color: var(--cinza-fundo);
+}
+.grid-container.receitas{
+    display: grid;
+    grid-template: auto / repeat(3, 1fr); /*Linhas automaticas que terá*/
+    /* grid-template: 1fr 1fr / 1fr 1fr 1fr ==  Cria 3 colunas de largura igual */
+    grid-gap: 30px; /* Espaçamento entre as células do grid */
+    margin-top: 20px; /* Margem acima da página */
+    margin-right: 30px; /* Margem à direita da página */
+    margin-bottom: 20px; /* Margem abaixo da página */
+    margin-left: 30px;
+    grid-auto-rows: 1fr; /* Altura das linhas automática */
+    justify-items: center; /* Alinha os elementos horizontalmente ao centro */
+    gap: 2em;
+}
+
+.grid-box{
+    background-color: var(--fundo-principal);
+    width: 17.8rem;
+    border: 1px solid #c9c9c9
+}
+.grid-box h4{
+    font-family: roboto;
+    font-weight: bolder;
+    margin: 5px;
+}
+.grid-box h5{
+    font-family: roboto;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button {
+    background-color: var(--vermelho-titulo);
+    color: var(--fundo-principal);
+    text-align: center;
+    font-size: 14px; /* Tamanho da fonte menor */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    padding: 8px 8px; /* Espaçamento interno para um botão com tamanho agradável */
+    margin: 15px
+}
+button:hover{
+    cursor: pointer;
+}
+/* Section 4 - quem-somos*/
+#quem-somos h2{
+    font-size: 51px;
+    font-family: pacifico;
+    color: var(--vermelho-titulo);
+    margin-bottom: 20px;
+}
+#quem-somos h3{
+    font-size: 28px;
+    font-family: roboto;
+}
+#quem-somos {
+    padding: 50px 0;
+    display: flex; /* Torna o contêiner de grid um flex container */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Alinha os elementos horizontalmente ao centro */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+.grid-container.quemsomos{
+    align-items: center;
+    display: flex;
+    margin-top: 20px; /* Margem acima da página */
+    margin-right: 20px; /* Margem à direita da página */
+    margin-bottom: 20px; /* Margem abaixo da página */
+    margin-left: 20px;
+    gap: 50px;
+}
+.grid-item{
+    margin: 50px;
+}
+.grid-item img{
+    border-radius: 50%;
+}
+.grid-item h6{
+    font-size: 32px;
+    font-family: pacifico;
+    color: var(--vermelho-titulo);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.grid-item h7{
+    color: var(--cinza-texto);
+    font-size: 23px;
+    font-family: roboto;
+    font-weight: bold;
+}
+
+/* Section 5 - FOOTER*/
+footer {
+    background-color: var(--cinza-rodape);
+    padding: 30px 0;
+    text-align: right;
+}
+footer a{
+    text-decoration: none;
+    color:var(--cinza-texto);
+    padding: 30px;
+    font-size: 32px;
+    font-weight: bold;
+}
